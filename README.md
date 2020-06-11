@@ -11,3 +11,10 @@ The examples of the bot of the veterinary clinic is accessible in Telegram at th
  * FlowXO development: https://t.me/VetClinicFlowxoBot
 
 You can access to the links in a mobile device with Telegram movile aplication instaled or in a computer with the web aplication or the desktop aplication and need a Telegram acount. 
+
+# Bot operation
+
+El bot has three main actions:
+* Greet: You can greet the bot and he answers you introduccing himself.
+* Report opening hours: when you ask him for center open hours he answers you with the center working hours
+* Make an appointment: When you ask him to make an appointment, he makes a call to an external service (Back-End folder) to query and save the appointments in a database. 
