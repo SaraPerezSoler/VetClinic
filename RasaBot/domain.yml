@@ -1,0 +1,70 @@
+intents:
+  - greet
+  - hour
+  - make_appointment
+  - affirm
+  - deny
+entities:
+  - date
+  - time
+  - pet
+  - petName
+
+actions:
+- utter_greet
+- utter_hours
+- utter_all_done
+- utter_ask_continue
+
+slots:
+  date:
+    type: unfeaturized
+    auto_fill: false
+  time:
+    type: unfeaturized
+    auto_fill: false
+  pet:
+    type: unfeaturized
+    auto_fill: false
+  petName:
+    type: unfeaturized
+    auto_fill: false
+
+templates:
+  utter_greet:
+  - text: "Welcome. I can tell you the center hours, or I can make an appointment. What can I do for you?"
+
+  utter_hours:
+  - text: "We're open from 9 AM to 6 PM every day."
+
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_date:
+    - text: "Okay, what day do you want an appoitment?"
+  utter_ask_time:
+    - text: "What time?"
+  utter_ask_pet:
+    - text: "What kind is your pet?"
+  utter_ask_petName:
+    - text: "What is your pet name?"
+  utter_ask_continue:
+    - text: "do you want to continue?"
+  utter_wrong_pet:
+    - text: "Pet type is not in the database, please try again"
+  utter_wrong_date:
+    - text: "I can not understand the date, please try again"
+  utter_wrong_time:
+    - text: "I can not understand the time, please try again"
+  utter_submit: 
+    - text: "I am going to schedule an appointment:\n
+             - date: {date}\n
+             - time: {time}\n
+             - pet: {pet}\n
+             - petName: {petName}\n"
+  utter_all_done:
+    - text: "All done"
+
+forms:
+  - appointment_form
