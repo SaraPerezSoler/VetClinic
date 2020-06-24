@@ -1,20 +1,21 @@
 # VetClinic
-Chatbots from a veterinary clinic to make an appointment for a pet. The repository has tree folders:
-* DialogflowBot contains the zip with json files to restore the bot of the veterinary clinic in Dialogflow
-* RasaBot contains the rasa files (python, markdown and YALM) to run the bot of the veterinary clinic with rasa
-* Back-end with a Java program with a Rest API to receive Rasa, Dialogflow and FlowXO calls from the veterinary center bot and query and updates a database.
+This repository contains the implementation of three chatbots for a veterinary clinic, using different technologies: Dialogflow, Rasa and FlowXO. The chatbots allow consulting the opening hours and making appointments for pets. The repository has three folders:
+* DialogflowBot contains a zip file with json files to restore the chatbot in Dialogflow.
+* RasaBot contains the rasa files (python, markdown, YAML) to run the chatbot with Rasa.
+* Back-end contains a Java program with a Rest API to receive requests from the chatbots to query and update a common database.
 
-# Bot Access
-The examples of the bot of the veterinary clinic is accessible in Telegram at the following links:
- * Rasa development: https://t.me/VetClinicRasaBot
+# Bot access
+The chatbots for the veterinary clinic are accessible via Telegram at the following links:
  * Dialogflow development: https://t.me/VetClinicDialogflowBot
+ * Rasa development: https://t.me/VetClinicRasaBot
  * FlowXO development: https://t.me/VetClinicFlowxoBot
 
-You can access to the links in a mobile device with Telegram movile aplication instaled or in a computer with the web aplication or the desktop aplication and need a Telegram acount. 
+You can access the links from a mobile device using the Telegram app, or from a desktop computer using either the Telegram web application or the Telegram desktop application. Having a Telegram account is also required. 
 
 # Bot operation
 
-El bot has three main actions:
-* Greet: You can greet the bot and he answers you introduccing himself.
-* Report opening hours: when you ask him for center open hours he answers you with the center working hours
-* Make an appointment: When you ask him to make an appointment, he makes a call to an external service (Back-End folder) to query and save the appointments in a database. 
+The chatbot has three main functionalities:
+* Greet: If you greet the chatbot, he answers by introducing himself.
+* Report opening hours: if you ask the chatbot about the clinic opening hours, he informs about the clinic working hours.
+* Make an appointment: If you request to fix an appointment, the chatbot calls an external service (Back-end folder) to search for available slots and save the appointment in the database.
+
