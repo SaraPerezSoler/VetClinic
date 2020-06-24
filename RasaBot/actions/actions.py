@@ -36,23 +36,6 @@ from duckling import Duckling, Dim, Language
 import time
 import requests
 
-d = DucklingWrapper()
-def time_validator(value:Text):
-    parses = d.parse_time(value)
-    for parse in parses:
-        if parse ['dim'] == 'time':
-            if parse['value'].get('grain') == 'minute' or parse['value'].get('grain') == 'hour': 
-                return parse ['value']['value']
-    return None
-    
-def date_validator(value:Text):
-        parses = d.parse_time(value)
-        for parse in parses:
-            if parse ['dim'] == 'time':
-                if parse['value'].get('grain') == 'day' or parse['value'].get('grain') == 'month' or parse['value'].get('grain') == 'year': 
-                    return parse ['value']['value']
-        return None
-
 class AppointmentForm(FormAction):
     """Example of a custom form action"""
     def __init__(self):
@@ -95,7 +78,16 @@ class AppointmentForm(FormAction):
                 "guinea pig",
                 "mouse",
                 "hamster", 
-                "turtles"]      
+                "turtles"]
+
+    def parseRet(self, value:Text, dim:Text, grain:Text) -> Text:
+        parses = self.d.parse(value)
+        for parse in parses:
+            if parse ['dim'] == dim:
+                if parse['value'].get('grain') == grain:
+                    return parse ['value']['value']
+        return None
+        
 
     def validate_date(self,
                          value: Text,
@@ -104,7 +96,7 @@ class AppointmentForm(FormAction):
                          domain: Dict[Text, Any]) -> Dict[Text, Any]:
         """Validate date value."""
        
-        date = date_validator(value)
+        date = self.parseRet(value, 'time', 'day')
         if (date != None):
             return {"date": date}
         else:
@@ -135,7 +127,7 @@ class AppointmentForm(FormAction):
                             domain: Dict[Text, Any]) -> Dict[Text, Any]:
         """Validate time value."""
 
-        time = time_validator(value)
+        time = self.parseRet(value, 'time', 'minute')
         if (time != None):
             return {"time":time}
         else:

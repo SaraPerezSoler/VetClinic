@@ -15,6 +15,7 @@ actions:
 - utter_hours
 - utter_all_done
 - utter_ask_continue
+- utter_default
 
 slots:
   date:
@@ -30,7 +31,7 @@ slots:
     type: unfeaturized
     auto_fill: false
 
-templates:
+responses:
   utter_greet:
   - text: "Welcome. I can tell you the center hours, or I can make an appointment. What can I do for you?"
 
@@ -65,6 +66,12 @@ templates:
              - petName: {petName}\n"
   utter_all_done:
     - text: "All done"
+  utter_default:
+    - text: "Sorry, I don't undestand you "
 
 forms:
   - appointment_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

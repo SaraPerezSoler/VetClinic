@@ -41,4 +41,4 @@
 #  password: password
 #  queue: queue
 action_endpoint:
-    url: http://localhost:5055/webhook
+  url: http://ec2-100-26-244-139.compute-1.amazonaws.com:5055/webhook

@@ -31,7 +31,6 @@
 - I want schredule an appointment for my [bird](pet) [Arquimedes](petName) on [Monday](date) at [9:00](time)
 
 ## intent:affirm
-- yeah a cheap restaurant serving international food
 - correct
 - ye
 - uh yes

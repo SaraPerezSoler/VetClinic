@@ -157,3 +157,4 @@ hs_err_pid*
 !VeterinaryCenter.zip
 *.ignore
 Back-End/VeterinarioApi/database.json
+RasaBot/actions/__init__.py

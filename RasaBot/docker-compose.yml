@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  rasa:
+    image: rasa/rasa:1.10.0-full
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command:
+      - run
+  app:
+    image: "vetrasabot/vetactions:0.4"
+    expose: 
+      - "5055"
