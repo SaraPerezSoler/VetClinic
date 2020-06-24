@@ -158,3 +158,5 @@ hs_err_pid*
 *.ignore
 Back-End/VeterinarioApi/database.json
 RasaBot/actions/__init__.py
+Back-End/VeterinarioApi/.sts4-cache/classpath-data.json
+Back-End/VeterinarioApi/.project
