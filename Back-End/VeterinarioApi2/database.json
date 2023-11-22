@@ -1,0 +1,10 @@
+{
+	"jdbc":"jdbc:postgresql",
+	"driver": "org.postgresql.Driver",
+	"host":"ec2-54-75-224-168.eu-west-1.compute.amazonaws.com",
+	"port": 5432,
+	"database": "df23pf5it1jmjr", 
+	"user": "muepxgxuelrkbj", 
+	"password": "63dcef7904f83226cc2620768146e8a07ce9bf745ff4ea8bd55c3f770abb69cb", 
+	"sslFactory": "org.postgresql.ssl.NonValidatingFactory"
+}
